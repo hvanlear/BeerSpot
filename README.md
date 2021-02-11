@@ -1,5 +1,3 @@
-# bp_flask
-Boiler Plate flask template that includes SQLAlchemy, Flask-WTForms, Flask-Migrate
 
 -  clone repo
 -  open shell and enter`python3 -m venv venv` to create a virtual enviorment
