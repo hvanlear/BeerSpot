@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h1>{{state}}</h1>
+<h2>Brewery Info</h2>
+{% for brewery in breweries %}
+<p>{{brewery["name"]}}</p>
+{% endfor %}
+
+<script src="{{ url_for('static', filename="JS/stateHandler.js") }}"></script>
+{% endblock %}

@@ -1,5 +1,20 @@
 {% extends "base.html" %} {% block content %}
 
 <h1>Hello World</h1>
+<div class="search">
+  <form action="/search" class="searchForm" method="POST">
+    <input type="text" class="searchInput" name="state" placeholder="input a topic" />
+    <button class="btn btn-primary">Search Brewiers By State</button>
+  </form>
+</div>
+<div class="stateList">
+<ul>
+  {% for state in states %}
+    <li><a href="#" class='state' id="{{state}}" data-state="{{state}}">{{state}}</a></li>
+  {% endfor %}
+</ul>
+</div>
+
+<script src="{{ url_for('static', filename="JS/stateHandler.js") }}"></script>
 
 {% endblock %}
