@@ -9,7 +9,6 @@ const state = {
   },
 };
 
-// showStateData();
 
 const loadSearchResults = async function (query) {
   try {
@@ -40,28 +39,6 @@ const loadSearchResults = async function (query) {
   }
 };
 
-// const getQuery = function (e) {
-//   if (e.target !== e.currentTarget) {
-//     let clickedItem = e.target.id;
-//     console.log(clickedItem.innerHTML);
-//   }
-//   e.stopPropagation();
-// };
-
-// stateParent.addEventListener("click", getQuery, false);
-
-// class searchView {
-//   #parentEl = document.querySelector(".searchForm");
-//   getQuery() {
-//     return this.#parentEl.querySelector(".searchInput").value;
-//   }
-//   addHandlerSearch(handler) {
-//     this.#parentEl.addEventListener("submit", function (e) {
-//       e.preventDefault();
-//       handler();
-//     });
-//   }
-// }
 
 const getQuery = function () {
   return searchInput.value;

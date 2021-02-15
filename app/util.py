@@ -50,9 +50,7 @@ BASE_URL = 'https://api.openbrewerydb.org/breweries'
 
 def get_brew(state):
     res = requests.get(f'{BASE_URL}', params={'by_state':state, 'page':100})
-
     data = res.json()
-    print(res.headers)
     return (data)
 
 
@@ -71,7 +69,6 @@ def get_state_info(state):
 
            
     #     }
-    print(data)
     jsonBrew = data.to_json(orient = "records")
     return jsonBrew
     # return data.to_json(orient = "records")
